@@ -3,6 +3,6 @@
   "homepage": "https://github.com/inwisloklem/157558-pink",
   "private": true,
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "browser-sync": "^2.18.6"
   }
 }
