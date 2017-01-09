@@ -8,6 +8,8 @@ html(lang = "en")
 
   body
     header.page-header
+      h1.page-header__title.visually-hidden HTML Academy: Pink
+
       nav.menu
         .menu__logo: a
           img.menu__img(src = "http://placehold.it/75x22", width = "75", height = "22", alt = "Pink")
@@ -15,7 +17,114 @@ html(lang = "en")
         button.menu__toggle(type = "button") Меню
 
         ul.menu__list
-          li.menu__item Главная
-          li.menu__item Фотографии
-          li.menu__item Конкурс
-          li.menu__item HTML Academy
+          li.menu__item
+            a.menu__link.menu__link--current(href = "#") Главная
+
+          li.menu__item
+            a.menu__link(href = "#") Фотографии
+
+          li.menu__item
+            a.menu__link(href = "#") Конкурс
+
+          li.menu__item
+            a.menu__link(href = "#") HTML Academy
+
+      section.promo
+        a.btn.btn--download.promo__btn(href = "#") Скачать приложение
+
+        ul.promo__list
+          li.promo__item
+            a(href = "#") iOS
+
+          li.promo__item
+            a(href = "#") Android
+
+          li.promo__item
+            a(href = "#") Windows Phone
+
+        .promo__note Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
+
+      section.offer
+        .offer__hgroup
+          h2.offer__title Устали от серости мегаполиса?
+          h2.offer__title Нам есть, что вам предложить!
+
+      section.features
+        ul.features__list
+          li.features__item
+            h3.features__item-title Поднимает настроение
+            p.features__desc Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
+
+          li.features__item
+            h3.features__item-title Меняет мир вокруг
+            p.features__desc Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
+
+          li.features__item
+            h3.features__item-title Заводит новых друзей
+            p.features__desc Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых
+
+      section.review
+        article.review__item
+          blockquote.review__block
+            cite.review__name Николай Петров
+
+            p.review__text
+              | «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
+              | А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+
+        fieldset.slider
+          input.slider__input#slider-review-1(type = "radio", name = "slider", value = "1", checked)
+          label.slider__label(for = "slider-review-1") Посмотреть отзыв
+
+          input.slider__input#slider-review-2(type = "radio", name = "slider", value = "2")
+          label.slider__label(for = "slider-review-2") Посмотреть отзыв
+
+          input.slider__input#slider-review-3(type = "radio", name = "slider", value = "3")
+          label.slider__label(for = "slider-review-3") Посмотреть отзыв
+
+      section.price
+        h2.visually-hidden Прайс-лист
+
+        table.price__table
+          tr.price__row
+            th.price__title Стандарт
+              .price__value 3.99 USD
+
+          tr.price__row
+            td.price__cell Розовый фильтр
+
+          tr.price__row
+            td.price__cell Смайлики
+
+          tr.price__row
+            td.price__cell Комментарии
+
+        fieldset.slider
+          input.slider__input#slider-price-1(type = "radio", name = "slider", value = "1")
+          label.slider__label(for = "slider-price-1") База
+
+          input.slider__input#slider-price-2(type = "radio", name = "slider", value = "2", checked)
+          label.slider__label(for = "slider-price-2") Стандарт
+
+          input.slider__input#slider-price-3(type = "radio", name = "slider", value = "3")
+          label.slider__label(for = "slider-price-3") Анлим
+
+      section.contacts
+        .contacts
+          h2.contacts__title Остались вопросы?
+          h2.contacts__title Свяжитесь с нами!
+
+        ul.contacts__list
+          li.contacts__item
+            h3.contacts__subtitle Звоните:
+            p.contacts__text +7 (812) 555-66-66
+
+          li.contacts__item
+            h3.contacts__subtitle Пишите:
+            p.contacts__text mail@htmlacademy.ru
+
+          li.contacts__item
+            h3.contacts__subtitle Приезжайте в гости:
+            p.contacts__text ул. Большая Конюшенная, 19/8
+
+        .contacts__map

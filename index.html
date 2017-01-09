@@ -9,6 +9,7 @@
 
 <body>
   <header class="page-header">
+    <h1 class="page-header__title visually-hidden">HTML Academy: Pink</h1>
     <nav class="menu">
       <div class="menu__logo">
         <a>
@@ -17,12 +18,112 @@
       </div>
       <button type="button" class="menu__toggle">Меню</button>
       <ul class="menu__list">
-        <li class="menu__item">Главная</li>
-        <li class="menu__item">Фотографии</li>
-        <li class="menu__item">Конкурс</li>
-        <li class="menu__item">HTML Academy</li>
+        <li class="menu__item"><a href="#" class="menu__link menu__link--current">Главная</a>
+        </li>
+        <li class="menu__item"><a href="#" class="menu__link">Фотографии</a>
+        </li>
+        <li class="menu__item"><a href="#" class="menu__link">Конкурс</a>
+        </li>
+        <li class="menu__item"><a href="#" class="menu__link">HTML Academy</a>
+        </li>
       </ul>
     </nav>
+    <section class="promo"><a href="#" class="btn btn--download promo__btn">Скачать приложение</a>
+      <ul class="promo__list">
+        <li class="promo__item"><a href="#">iOS</a>
+        </li>
+        <li class="promo__item"><a href="#">Android</a>
+        </li>
+        <li class="promo__item"><a href="#">Windows Phone</a>
+        </li>
+      </ul>
+      <div class="promo__note">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</div>
+    </section>
+    <section class="offer">
+      <div class="offer__hgroup">
+        <h2 class="offer__title">Устали от серости мегаполиса?</h2>
+        <h2 class="offer__title">Нам есть, что вам предложить!</h2>
+      </div>
+    </section>
+    <section class="features">
+      <ul class="features__list">
+        <li class="features__item">
+          <h3 class="features__item-title">Поднимает настроение</h3>
+          <p class="features__desc">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+        </li>
+        <li class="features__item">
+          <h3 class="features__item-title">Меняет мир вокруг</h3>
+          <p class="features__desc">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+        </li>
+        <li class="features__item">
+          <h3 class="features__item-title">Заводит новых друзей</h3>
+          <p class="features__desc">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+        </li>
+      </ul>
+    </section>
+    <section class="review">
+      <article class="review__item">
+        <blockquote class="review__block"><cite class="review__name">Николай Петров</cite>
+          <p class="review__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+        </blockquote>
+      </article>
+      <fieldset class="slider">
+        <input id="slider-review-1" type="radio" name="slider" value="1" checked class="slider__input">
+        <label for="slider-review-1" class="slider__label">Посмотреть отзыв</label>
+        <input id="slider-review-2" type="radio" name="slider" value="2" class="slider__input">
+        <label for="slider-review-2" class="slider__label">Посмотреть отзыв</label>
+        <input id="slider-review-3" type="radio" name="slider" value="3" class="slider__input">
+        <label for="slider-review-3" class="slider__label">Посмотреть отзыв</label>
+      </fieldset>
+    </section>
+    <section class="price">
+      <h2 class="visually-hidden">Прайс-лист</h2>
+      <table class="price__table">
+        <tr class="price__row">
+          <th class="price__title">Стандарт
+            <div class="price__value">3.99 USD</div>
+          </th>
+        </tr>
+        <tr class="price__row">
+          <td class="price__cell">Розовый фильтр</td>
+        </tr>
+        <tr class="price__row">
+          <td class="price__cell">Смайлики</td>
+        </tr>
+        <tr class="price__row">
+          <td class="price__cell">Комментарии</td>
+        </tr>
+      </table>
+      <fieldset class="slider">
+        <input id="slider-price-1" type="radio" name="slider" value="1" class="slider__input">
+        <label for="slider-price-1" class="slider__label">База</label>
+        <input id="slider-price-2" type="radio" name="slider" value="2" checked class="slider__input">
+        <label for="slider-price-2" class="slider__label">Стандарт</label>
+        <input id="slider-price-3" type="radio" name="slider" value="3" class="slider__input">
+        <label for="slider-price-3" class="slider__label">Анлим</label>
+      </fieldset>
+    </section>
+    <section class="contacts">
+      <div class="contacts">
+        <h2 class="contacts__title">Остались вопросы?</h2>
+        <h2 class="contacts__title">Свяжитесь с нами!</h2>
+      </div>
+      <ul class="contacts__list">
+        <li class="contacts__item">
+          <h3 class="contacts__subtitle">Звоните:</h3>
+          <p class="contacts__text">+7 (812) 555-66-66</p>
+        </li>
+        <li class="contacts__item">
+          <h3 class="contacts__subtitle">Пишите:</h3>
+          <p class="contacts__text">mail@htmlacademy.ru</p>
+        </li>
+        <li class="contacts__item">
+          <h3 class="contacts__subtitle">Приезжайте в гости:</h3>
+          <p class="contacts__text">ул. Большая Конюшенная, 19/8</p>
+        </li>
+      </ul>
+      <div class="contacts__map"></div>
+    </section>
   </header>
 </body>
 
