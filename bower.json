@@ -1,0 +1,19 @@
+{
+  "name": "Pink",
+  "homepage": "https://github.com/inwisloklem/157558-pink",
+  "authors": [
+    "inwisloklem <89099109104@mail.ru>"
+  ],
+  "main": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
