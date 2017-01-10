@@ -67,41 +67,52 @@
           <p class="review__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
         </blockquote>
       </article>
-      <fieldset class="slider">
-        <input id="slider-review-1" type="radio" name="slider-review" value="1" checked class="slider__input">
-        <label for="slider-review-1" class="slider__label">Посмотреть отзыв</label>
-        <input id="slider-review-2" type="radio" name="slider-review" value="2" class="slider__input">
-        <label for="slider-review-2" class="slider__label">Посмотреть отзыв</label>
-        <input id="slider-review-3" type="radio" name="slider-review" value="3" class="slider__input">
-        <label for="slider-review-3" class="slider__label">Посмотреть отзыв</label>
-      </fieldset>
+      <div class="review__slider">
+        <div class="review__toggle"><span class="review__dot review__dot--active"></span><span class="review__dot"></span><span class="review__dot"></span>
+        </div>
+      </div>
     </section>
     <section class="price">
       <h2 class="visually-hidden">Прайс-лист</h2>
       <table class="price__table">
         <tr class="price__row">
-          <th class="price__title">Стандарт
+          <th></th>
+          <th class="price__th">
+            <div class="price__title">База</div>
+            <div class="price__value">1.99 USD</div>
+          </th>
+          <th class="price__th price__th">
+            <div class="price__title">Стандарт</div>
             <div class="price__value">3.99 USD</div>
+          </th>
+          <th class="price__th">
+            <div class="price__title">Анлим</div>
+            <div class="price__value">9.99 USD</div>
           </th>
         </tr>
         <tr class="price__row">
           <td class="price__cell">Розовый фильтр</td>
+          <td data-content="Розовый фильтр" class="price__cell">Да</td>
+          <td data-content="Розовый фильтр" class="price__cell">Да</td>
+          <td data-content="Розовый фильтр" class="price__cell">Да</td>
         </tr>
         <tr class="price__row">
           <td class="price__cell">Смайлики</td>
+          <td data-content="Смайлики" class="price__cell">Нет</td>
+          <td data-content="Смайлики" class="price__cell">Да</td>
+          <td data-content="Смайлики" class="price__cell">Да</td>
         </tr>
         <tr class="price__row">
           <td class="price__cell">Комментарии</td>
+          <td data-content="Комментарии" class="price__cell">Нет</td>
+          <td data-content="Комментарии" class="price__cell">Нет</td>
+          <td data-content="Комментарии" class="price__cell">Да</td>
         </tr>
       </table>
-      <fieldset class="slider">
-        <input id="slider-price-1" type="radio" name="slider-price" value="1" class="slider__input">
-        <label for="slider-price-1" class="slider__label">База</label>
-        <input id="slider-price-2" type="radio" name="slider-price" value="2" checked class="slider__input">
-        <label for="slider-price-2" class="slider__label">Стандарт</label>
-        <input id="slider-price-3" type="radio" name="slider-price" value="3" class="slider__input">
-        <label for="slider-price-3" class="slider__label">Анлим</label>
-      </fieldset>
+      <div class="price__slider">
+        <div class="price__toggle"><span class="price__dot"></span><span class="price__dot price__dot--active"></span><span class="price__dot"></span>
+        </div>
+      </div>
     </section>
     <section class="contacts">
       <div class="contacts">

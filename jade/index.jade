@@ -72,42 +72,54 @@ html(lang = "en")
               | «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
               | А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
 
-        fieldset.slider
-          input.slider__input#slider-review-1(type = "radio", name = "slider-review", value = "1", checked)
-          label.slider__label(for = "slider-review-1") Посмотреть отзыв
-
-          input.slider__input#slider-review-2(type = "radio", name = "slider-review", value = "2")
-          label.slider__label(for = "slider-review-2") Посмотреть отзыв
-
-          input.slider__input#slider-review-3(type = "radio", name = "slider-review", value = "3")
-          label.slider__label(for = "slider-review-3") Посмотреть отзыв
+        .review__slider
+          .review__toggle
+            span.review__dot.review__dot--active
+            span.review__dot
+            span.review__dot
 
       section.price
         h2.visually-hidden Прайс-лист
 
         table.price__table
           tr.price__row
-            th.price__title Стандарт
+            th
+
+            th.price__th
+              .price__title База
+              .price__value 1.99 USD
+
+            th.price__th.price__th
+              .price__title Стандарт
               .price__value 3.99 USD
+
+            th.price__th
+              .price__title Анлим
+              .price__value 9.99 USD
 
           tr.price__row
             td.price__cell Розовый фильтр
+            td.price__cell(data-content = "Розовый фильтр") Да
+            td.price__cell(data-content = "Розовый фильтр") Да
+            td.price__cell(data-content = "Розовый фильтр") Да
 
           tr.price__row
             td.price__cell Смайлики
+            td.price__cell(data-content = "Смайлики") Нет
+            td.price__cell(data-content = "Смайлики") Да
+            td.price__cell(data-content = "Смайлики") Да
 
           tr.price__row
             td.price__cell Комментарии
+            td.price__cell(data-content = "Комментарии") Нет
+            td.price__cell(data-content = "Комментарии") Нет
+            td.price__cell(data-content = "Комментарии") Да
 
-        fieldset.slider
-          input.slider__input#slider-price-1(type = "radio", name = "slider-price", value = "1")
-          label.slider__label(for = "slider-price-1") База
-
-          input.slider__input#slider-price-2(type = "radio", name = "slider-price", value = "2", checked)
-          label.slider__label(for = "slider-price-2") Стандарт
-
-          input.slider__input#slider-price-3(type = "radio", name = "slider-price", value = "3")
-          label.slider__label(for = "slider-price-3") Анлим
+        .price__slider
+          .price__toggle
+            span.price__dot
+            span.price__dot.price__dot--active
+            span.price__dot
 
       section.contacts
         .contacts
