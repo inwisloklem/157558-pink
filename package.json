@@ -8,6 +8,7 @@
     "gulp-html-prettify": "0.0.1",
     "gulp-jade": "^1.1.0",
     "gulp-less": "^3.3.0",
-    "gulp-plumber": "^1.1.0"
+    "gulp-plumber": "^1.1.0",
+    "less-plugin-glob": "^1.1.1"
   }
 }

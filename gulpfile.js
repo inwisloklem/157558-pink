@@ -3,9 +3,10 @@
 var gulp = require("gulp");
 
 var jade = require("gulp-jade");
+var less = require("gulp-less");
+var lessPluginGlob = require("less-plugin-glob");
 var plumber = require("gulp-plumber");
 var prettify = require("gulp-html-prettify");
-var less = require("gulp-less");
 var server = require("browser-sync").create();
 
 gulp.task("serve", ["markup", "style"], function() {
@@ -16,7 +17,7 @@ gulp.task("serve", ["markup", "style"], function() {
   });
 
   gulp.watch("jade/**/*.jade", ["markup"]);
-  gulp.watch("sass/**/*.less", ["style"]);
+  gulp.watch("less/**/*.less", ["style"]);
 
   gulp.watch("*.html").on("change", server.reload);
 });
@@ -34,9 +35,11 @@ gulp.task("markup", function() {
 });
 
 gulp.task("style", function() {
-  gulp.src("sass/style.less")
+  gulp.src("less/style.less")
     .pipe(plumber())
-    .pipe(less())
+    .pipe(less({
+        plugins: [lessPluginGlob]
+      }))
     .pipe(gulp.dest("css"))
     .pipe(server.stream());
 });
