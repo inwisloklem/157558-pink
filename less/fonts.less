@@ -1,0 +1,40 @@
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: lighter;
+
+  src: url("../fonts/opensanslight.woff") format("woff"),
+  url("../fonts/opensanslight.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+
+  src: url("../fonts/opensans.woff") format("woff"),
+  url("../fonts/opensans.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: bold;
+
+  src: url("../fonts/opensansbold.woff") format("woff"),
+  url("../fonts/opensansbold.woff2") format("woff2");
+}
+
+@font-stack: "Open Sans", "Helvetica", "Arial", sans-serif;
+
+.text-transform(@value) when (@value = uppercase) {
+  text-transform: @value;
+}
+
+.font(@font-size, @line-height, @font-weight: normal, @text-transform: none) {
+  font-size: @font-size;
+  font-weight: @font-weight;
+  line-height: @line-height;
+
+  .text-transform(@text-transform);
+}
