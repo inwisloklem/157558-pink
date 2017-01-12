@@ -11,14 +11,6 @@
   <header class="page-header">
     <h1 class="page-header__title visually-hidden">HTML Academy: Pink</h1>
     <nav class="menu">
-      <div class="menu__wrapper">
-        <div class="menu__logo">
-          <a>
-            <img src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Pink" class="menu__img">
-          </a>
-        </div>
-        <button type="button" class="menu__toggle">Меню</button>
-      </div>
       <ul class="menu__list">
         <li class="menu__item"><a href="#" class="menu__link menu__link--current">Главная</a>
         </li>
@@ -29,15 +21,22 @@
         <li class="menu__item"><a href="#" class="menu__link">HTML Academy</a>
         </li>
       </ul>
+      <div class="menu__wrapper">
+        <div class="menu__logo">
+          <a>
+            <img src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Pink" class="menu__img">
+          </a>
+        </div>
+        <button type="button" class="menu__toggle">Меню</button>
+      </div>
     </nav>
-    <section class="promo"><a href="#" class="btn btn--download promo__btn">Скачать приложение</a>
+  </header>
+  <main>
+    <section class="promo"><a href="#" class="btn promo__btn btn--download">Скачать приложение</a>
       <ul class="promo__list">
-        <li class="promo__item"><a href="#">iOS</a>
-        </li>
-        <li class="promo__item"><a href="#">Android</a>
-        </li>
-        <li class="promo__item"><a href="#">Windows Phone</a>
-        </li>
+        <li class="promo__item promo__item--apple">Apple</li>
+        <li class="promo__item promo__item--android">Android</li>
+        <li class="promo__item promo__item--ms">Microsoft</li>
       </ul>
       <div class="promo__note">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</div>
     </section>
@@ -137,7 +136,7 @@
       </ul>
       <div class="contacts__map"></div>
     </section>
-  </header>
+  </main>
 </body>
 
 </html>

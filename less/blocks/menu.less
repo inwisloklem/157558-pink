@@ -10,9 +10,9 @@
     flex-direction: row;
     padding: 20px 22px;
 
-    .borders-and-background;
     justify-content: space-between;
     align-items: center;
+    .borders-and-background;
   }
 
   &__logo {
@@ -25,12 +25,13 @@
   }
 
   &__toggle {
-    width: 50px;
+    width: 24px;
     height: 24px;
     outline: none;
     border: none;
-    background: url("../img/icon-menu-burger.svg");
+    background: url("../img/icon-menu-cross.svg");
     font-size: 0;
+    cursor: pointer;
   }
 
   &__list {
@@ -40,15 +41,15 @@
   }
 
   &__item {
-    padding: 22px 0;
     text-align: center;
 
     .borders-and-background;
-    .font(18px, 32px, bold, uppercase);
+    .font(18px, 32px, 700, uppercase);
   }
 
   &__link {
-    padding: inherit;
+    padding: 22px 0;
+    display: block;
     color: @white;
     text-decoration: none;
   }

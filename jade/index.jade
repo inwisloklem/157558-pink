@@ -11,37 +11,26 @@ html(lang = "en")
       h1.page-header__title.visually-hidden HTML Academy: Pink
 
       nav.menu
+        ul.menu__list
+          li.menu__item: a.menu__link.menu__link--current(href = "#") Главная
+          li.menu__item: a.menu__link(href = "#") Фотографии
+          li.menu__item: a.menu__link(href = "#") Конкурс
+          li.menu__item: a.menu__link(href = "#") HTML Academy
+
         .menu__wrapper
           .menu__logo: a
             img.menu__img(src = "img/logo-pink-white-mobile.svg", width = "75", height = "22", alt = "Pink")
 
           button.menu__toggle(type = "button") Меню
 
-        ul.menu__list
-          li.menu__item
-            a.menu__link.menu__link--current(href = "#") Главная
-
-          li.menu__item
-            a.menu__link(href = "#") Фотографии
-
-          li.menu__item
-            a.menu__link(href = "#") Конкурс
-
-          li.menu__item
-            a.menu__link(href = "#") HTML Academy
-
+    main
       section.promo
-        a.btn.btn--download.promo__btn(href = "#") Скачать приложение
+        a.btn.promo__btn.btn--download(href = "#") Скачать приложение
 
         ul.promo__list
-          li.promo__item
-            a(href = "#") iOS
-
-          li.promo__item
-            a(href = "#") Android
-
-          li.promo__item
-            a(href = "#") Windows Phone
+          li.promo__item.promo__item--apple Apple
+          li.promo__item.promo__item--android Android
+          li.promo__item.promo__item--ms Microsoft
 
         .promo__note Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
 
@@ -55,11 +44,9 @@ html(lang = "en")
           li.features__item
             h3.features__item-title Поднимает настроение
             p.features__desc Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
-
           li.features__item
             h3.features__item-title Меняет мир вокруг
             p.features__desc Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
-
           li.features__item
             h3.features__item-title Заводит новых друзей
             p.features__desc Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых
@@ -85,15 +72,12 @@ html(lang = "en")
         table.price__table
           tr.price__row
             th
-
             th.price__th
               .price__title База
               .price__value 1.99 USD
-
             th.price__th.price__th
               .price__title Стандарт
               .price__value 3.99 USD
-
             th.price__th
               .price__title Анлим
               .price__value 9.99 USD
@@ -131,11 +115,9 @@ html(lang = "en")
           li.contacts__item
             h3.contacts__subtitle Звоните:
             p.contacts__text +7 (812) 555-66-66
-
           li.contacts__item
             h3.contacts__subtitle Пишите:
             p.contacts__text mail@htmlacademy.ru
-
           li.contacts__item
             h3.contacts__subtitle Приезжайте в гости:
             p.contacts__text ул. Большая Конюшенная, 19/8

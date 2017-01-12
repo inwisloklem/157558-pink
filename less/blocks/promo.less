@@ -1,0 +1,52 @@
+.promo {
+  display: flex;
+  flex-direction: column;
+  min-height: 270px;
+  background-color: @mirage;
+
+  justify-content: space-around;
+  align-items: center;
+
+  &__list {
+    list-style-type: none;
+    font-size: 0;
+  }
+
+  &__item {
+    display: inline-block;
+    vertical-align: bottom;
+
+    &--apple {
+      width: 46px;
+      height: 57px;
+
+      margin-right: 38px;
+
+      background-image: url("../img/logo-apple.svg");
+    }
+
+    &--android {
+      width: 42px;
+      height: 46px;
+
+      margin-right: 38px;
+
+      background-image: url("../img/logo-android.svg");
+    }
+
+    &--ms {
+      width: 44px;
+      height: 41px;
+
+      background-image: url("../img/logo-microsoft.svg");
+    }
+  }
+
+  &__note {
+    width: 230px;
+    color: @white;
+    text-align: center;
+
+    .font(14px, 24px, 300);
+  }
+}
