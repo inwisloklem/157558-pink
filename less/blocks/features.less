@@ -1,0 +1,43 @@
+.features {
+  overflow: hidden;
+  background-color: @concrete;
+
+  &::before {
+    display: block;
+    border-top: 32px solid @white;
+    border-right: 100vw solid transparent;
+    content: "";
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+
+    justify-content: center;
+  }
+
+  &__title {
+    padding: 0 40px;
+    padding-bottom: 24px;
+    text-align: center;
+
+    .font(18px, 24px, 700);
+  }
+
+  &__desc {
+    padding: 0 40px;
+    padding-bottom: 44px;
+    color: @mirage;
+    text-align: center;
+
+    .font(14px, 24px, 400);
+  }
+
+  &::after {
+    display: block;
+    height: 276px;
+    background: url("../img/iphone-screen-mobile@1x.png") no-repeat center top;
+    content: "";
+  }
+}

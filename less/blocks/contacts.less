@@ -1,0 +1,54 @@
+.contacts {
+  &__title {
+    color: @mirage;
+    text-align: center;
+
+    .font(24px, 29px, 300);
+  }
+
+  &__hgroup {
+    margin-top: 45px;
+    margin-bottom: 45px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 45px;
+  }
+
+  &__item {
+    margin-bottom: 25px;
+    text-align: center;
+  }
+
+  &__subtitle {
+    margin-bottom: 10px;
+
+    .font(18px, 24px, 700);
+  }
+
+  &__text {
+    margin: auto;
+    width: 75%;
+    color: @cerise-red;
+
+    .font(24px, 29px, 300);
+  }
+
+  &__map {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+    background-color: @concrete;
+
+    &::before {
+      position: absolute;
+      display: block;
+      border-top: 32px solid @white;
+      border-right: 50vw solid transparent;
+      border-left: 50vw solid transparent;
+      content: "";
+    }
+  }
+}

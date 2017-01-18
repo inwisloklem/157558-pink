@@ -8,7 +8,7 @@ html(lang = "en")
 
   body
     header.page-header
-      h1.page-header__title.visually-hidden HTML Academy: Pink
+      h1.visually-hidden HTML Academy: Pink
 
       nav.menu
         ul.menu__list
@@ -17,11 +17,13 @@ html(lang = "en")
           li.menu__item: a.menu__link(href = "#") Конкурс
           li.menu__item: a.menu__link(href = "#") HTML Academy
 
-        .menu__wrapper
+        .menu__block
           .menu__logo: a
             img.menu__img(src = "img/logo-pink-white-mobile.svg", width = "75", height = "22", alt = "Pink")
 
           button.menu__toggle(type = "button") Меню
+
+      .page-header__background
 
     main
       section.promo
@@ -42,13 +44,13 @@ html(lang = "en")
       section.features
         ul.features__list
           li.features__item
-            h3.features__item-title Поднимает настроение
+            h3.features__title Поднимает настроение
             p.features__desc Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
           li.features__item
-            h3.features__item-title Меняет мир вокруг
+            h3.features__title Меняет мир вокруг
             p.features__desc Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
           li.features__item
-            h3.features__item-title Заводит новых друзей
+            h3.features__title Заводит новых друзей
             p.features__desc Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых
 
       section.review
@@ -107,7 +109,7 @@ html(lang = "en")
             span.price__dot
 
       section.contacts
-        .contacts
+        .contacts__hgroup
           h2.contacts__title Остались вопросы?
           h2.contacts__title Свяжитесь с нами!
 
@@ -120,6 +122,6 @@ html(lang = "en")
             p.contacts__text mail@htmlacademy.ru
           li.contacts__item
             h3.contacts__subtitle Приезжайте в гости:
-            p.contacts__text ул. Большая Конюшенная, 19/8
+            p.contacts__text ул. Большая Конюшенная,&nbsp;19/8
 
         .contacts__map
