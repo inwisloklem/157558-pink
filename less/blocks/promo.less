@@ -1,7 +1,8 @@
 .promo {
   display: flex;
   flex-direction: column;
-  min-height: 270px;
+  padding: 15px 0;
+  min-height: 240px;
   background-color: @mirage;
 
   justify-content: space-around;
@@ -17,27 +18,22 @@
     vertical-align: bottom;
 
     &--apple {
+      margin-right: 38px;
       width: 46px;
       height: 57px;
-
-      margin-right: 38px;
-
       background-image: url("../img/logo-apple.svg");
     }
 
     &--android {
+      margin-right: 38px;
       width: 42px;
       height: 46px;
-
-      margin-right: 38px;
-
       background-image: url("../img/logo-android.svg");
     }
 
     &--ms {
       width: 44px;
       height: 41px;
-
       background-image: url("../img/logo-microsoft.svg");
     }
   }
@@ -46,7 +42,6 @@
     width: 230px;
     color: @white;
     text-align: center;
-
     opacity: 0.9;
 
     .font(14px, 24px, 300);

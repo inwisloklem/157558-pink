@@ -76,44 +76,50 @@
     </section>
     <section class="price">
       <h2 class="visually-hidden">Прайс-лист</h2>
-      <table class="price__table">
-        <tr class="price__row">
-          <th></th>
-          <th class="price__th">
-            <div class="price__title">База</div>
-            <div class="price__value">1.99 USD</div>
-          </th>
-          <th class="price__th price__th">
-            <div class="price__title">Стандарт</div>
-            <div class="price__value">3.99 USD</div>
-          </th>
-          <th class="price__th">
-            <div class="price__title">Анлим</div>
-            <div class="price__value">9.99 USD</div>
-          </th>
-        </tr>
-        <tr class="price__row">
-          <td class="price__cell">Розовый фильтр</td>
-          <td data-content="Розовый фильтр" class="price__cell">Да</td>
-          <td data-content="Розовый фильтр" class="price__cell">Да</td>
-          <td data-content="Розовый фильтр" class="price__cell">Да</td>
-        </tr>
-        <tr class="price__row">
-          <td class="price__cell">Смайлики</td>
-          <td data-content="Смайлики" class="price__cell">Нет</td>
-          <td data-content="Смайлики" class="price__cell">Да</td>
-          <td data-content="Смайлики" class="price__cell">Да</td>
-        </tr>
-        <tr class="price__row">
-          <td class="price__cell">Комментарии</td>
-          <td data-content="Комментарии" class="price__cell">Нет</td>
-          <td data-content="Комментарии" class="price__cell">Нет</td>
-          <td data-content="Комментарии" class="price__cell">Да</td>
-        </tr>
-      </table>
+      <input id="price-table-1" type="radio" name="price-toggle" class="price__input">
+      <input id="price-table-2" type="radio" name="price-toggle" checked class="price__input">
+      <input id="price-table-3" type="radio" name="price-toggle" class="price__input">
       <div class="price__slider">
-        <div class="price__toggle"><span class="price__dot"></span><span class="price__dot price__dot--active"></span><span class="price__dot"></span>
-        </div>
+        <label for="price-table-1" class="price__label">1</label>
+        <label for="price-table-2" class="price__label">2</label>
+        <label for="price-table-3" class="price__label">3</label>
+      </div>
+      <div class="price__wrapper">
+        <table class="price__table">
+          <tr class="price__row">
+            <th class="price__toggle"></th>
+            <th class="price__th">
+              <div class="price__title">База</div>
+              <div class="price__value">1.99 USD</div>
+            </th>
+            <th class="price__th">
+              <div class="price__title">Стандарт</div>
+              <div class="price__value">3.99 USD</div>
+            </th>
+            <th class="price__th">
+              <div class="price__title">Анлим</div>
+              <div class="price__value">9.99 USD</div>
+            </th>
+          </tr>
+          <tr class="price__row">
+            <td class="price__cell price__toggle">Розовый фильтр</td>
+            <td data-content="Розовый фильтр" class="price__cell">Да</td>
+            <td data-content="Розовый фильтр" class="price__cell">Да</td>
+            <td data-content="Розовый фильтр" class="price__cell">Да</td>
+          </tr>
+          <tr class="price__row">
+            <td class="price__cell price__toggle">Смайлики</td>
+            <td data-content="Смайлики" class="price__cell">Нет</td>
+            <td data-content="Смайлики" class="price__cell">Да</td>
+            <td data-content="Смайлики" class="price__cell">Да</td>
+          </tr>
+          <tr class="price__row">
+            <td class="price__cell price__toggle">Комментарии</td>
+            <td data-content="Комментарии" class="price__cell">Нет</td>
+            <td data-content="Комментарии" class="price__cell">Нет</td>
+            <td data-content="Комментарии" class="price__cell">Да</td>
+          </tr>
+        </table>
       </div>
     </section>
     <section class="contacts">

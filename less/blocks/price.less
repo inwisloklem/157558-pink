@@ -1,3 +1,114 @@
+.borders() {
+  border: 2px solid @mercury;
+}
+
 .price {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
   background-color: @concrete;
+
+  &::before {
+    display: block;
+    border-top: 32px solid @white;
+    border-right: 100vw solid transparent;
+    content: "";
+  }
+
+  &__input {
+    display: none;
+  }
+
+  &__slider {
+    text-align: center;
+    order: 1;
+    margin-bottom: 50px;
+  }
+
+  &__label {
+    display: inline-block;
+    margin-right: 9px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: @silver-sand;
+    font-size: 0;
+    cursor: pointer;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  &__input#price-table-1:checked ~ &__slider &__label[for = "price-table-1"],
+  &__input#price-table-2:checked ~ &__slider &__label[for = "price-table-2"],
+  &__input#price-table-3:checked ~ &__slider &__label[for = "price-table-3"] {
+    margin-right: 6px;
+    width: 6px;
+    height: 6px;
+    border: 3px solid @ebony-clay;
+    background-color: @white;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  &__wrapper {
+    margin-top: 65px;
+    margin-bottom: 35px;
+    width: 100%;
+  }
+
+  &__table {
+    margin-left: 20px;
+    width: ~"calc(300% - 124px)";
+    border-collapse: collapse;
+
+    .borders()
+  }
+
+  &__input#price-table-1:checked ~ &__wrapper &__table {
+    transform: none;
+    transition: all 0.4s ease-out;
+  }
+
+  &__input#price-table-2:checked ~ &__wrapper &__table {
+    transform: translate(-33.3%);
+    transition: all 0.4s ease-out;
+  }
+
+  &__input#price-table-3:checked ~ &__wrapper &__table {
+    transform: translate(-66.6%);
+    transition: all 0.4s ease-out;
+  }
+
+  &__toggle {
+    display: none;
+  }
+
+  &__th {
+    height: 100px;
+    background-color: @ebony-clay;
+    color: @white;
+
+    .borders()
+  }
+
+  &__cell {
+    padding-left: 25px;
+    height: 60px;
+    background-color: @white;
+    text-align: left;
+
+    .borders()
+  }
+
+  &__title {
+    .font(18px, 30px, 700, uppercase);
+  }
+
+  &__value {
+    .font(24px, 30px, 300, uppercase);
+  }
 }
