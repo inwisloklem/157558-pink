@@ -12,10 +12,17 @@
     box-sizing: border-box;
     padding: 20px 22px;
     width: 100%;
+    transition: all 0.4s ease-out;
 
     justify-content: space-between;
     align-items: center;
     .borders-and-background();
+  }
+
+  &--js &__block {
+    border-color: fade(@mirage, 70%);
+    background-color: fade(@mirage, 70%);
+    transition: all 0.4s ease-out;
   }
 
   &__logo {
@@ -37,22 +44,34 @@
     cursor: pointer;
   }
 
+  &--js &__toggle {
+    width: 50px;
+    background: url("../img/icon-menu-burger.svg");
+  }
+
   &__list {
     display: flex;
     flex-direction: column;
+    margin-top: 0;
     list-style-type: none;
+    transition: all 0.4s ease-out;
+  }
+
+  &--js &__list {
+    margin-top: -260px;
+    transition: all 0.4s ease-out;
   }
 
   &__item {
     text-align: center;
 
     .borders-and-background();
-    .font(18px, 32px, 700, uppercase);
+    .font(18px, 20px, 700, uppercase);
   }
 
   &__link {
-    padding: 22px 0;
     display: block;
+    padding: 22px 0;
     color: @white;
     text-decoration: none;
   }
