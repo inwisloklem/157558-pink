@@ -20,9 +20,10 @@
   }
 
   &__slider {
-    text-align: center;
-    order: 1;
     margin-bottom: 50px;
+    text-align: center;
+
+    order: 1;
   }
 
   &__label {
@@ -65,22 +66,22 @@
     width: ~"calc(300% - 124px)";
     border-collapse: collapse;
 
-    .borders()
+    .borders();
   }
 
   &__input#price-table-1:checked ~ &__wrapper &__table {
-    transform: none;
     transition: all 0.4s ease-out;
+    transform: none;
   }
 
   &__input#price-table-2:checked ~ &__wrapper &__table {
-    transform: translate(-33.3%);
     transition: all 0.4s ease-out;
+    transform: translate(-33.3%);
   }
 
   &__input#price-table-3:checked ~ &__wrapper &__table {
-    transform: translate(-66.6%);
     transition: all 0.4s ease-out;
+    transform: translate(-66.6%);
   }
 
   &__toggle {
@@ -92,16 +93,33 @@
     background-color: @ebony-clay;
     color: @white;
 
-    .borders()
+    .borders();
   }
 
   &__cell {
     padding-left: 25px;
     height: 60px;
     background-color: @white;
+    background-position: right 25px center;
+    background-repeat: no-repeat;
     text-align: left;
+    font-size: 0;
 
-    .borders()
+    .borders();
+
+    &::before {
+      content: attr(data-content);
+
+      .font(14px, 30px, 400, uppercase);
+    }
+
+    &--yes {
+      background-image: url("../img/icon-yes.svg");
+    }
+
+    &--no {
+      background-image: url("../img/icon-no.svg");
+    }
   }
 
   &__title {
