@@ -28,9 +28,10 @@
 
   &__label {
     display: inline-block;
-    margin-right: 9px;
+    margin-right: 6px;
     width: 6px;
     height: 6px;
+    border: 3px solid @concrete;
     border-radius: 50%;
     background-color: @silver-sand;
     font-size: 0;
@@ -44,15 +45,8 @@
   &__input#price-table-1:checked ~ &__slider &__label[for = "price-table-1"],
   &__input#price-table-2:checked ~ &__slider &__label[for = "price-table-2"],
   &__input#price-table-3:checked ~ &__slider &__label[for = "price-table-3"] {
-    margin-right: 6px;
-    width: 6px;
-    height: 6px;
-    border: 3px solid @ebony-clay;
+    border-color: @ebony-clay;
     background-color: @white;
-
-    &:last-of-type {
-      margin-right: 0;
-    }
   }
 
   &__wrapper {

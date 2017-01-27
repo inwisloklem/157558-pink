@@ -1,0 +1,22 @@
+@tablet: ~"(min-width: 700px) and (max-width: 999px)";
+@tablet-desktop: ~"(min-width: 700px)";
+@desktop: ~"(min-width: 1000px)";
+@high-dpi: ~"(min-resolution: 144dpi), (min-resolution: 1.5dppx)";
+
+.tablet-width(@rules) {
+  @media @tablet {
+    @rules();
+  }
+}
+
+.desktop-width(@rules) {
+  @media @desktop {
+    @rules();
+  }
+}
+
+.tablet-desktop-width(@rules) {
+  @media @tablet-desktop {
+    @rules();
+  }
+}
