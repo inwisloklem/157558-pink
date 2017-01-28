@@ -13,14 +13,13 @@ html(lang = "en")
 
       nav.menu
         ul.menu__list
-          li.menu__item: a.menu__link.menu__link--current(href = "#") Главная
+          li.menu__item: a.menu__link.menu__link--current Главная
           li.menu__item: a.menu__link(href = "#") Фотографии
           li.menu__item: a.menu__link(href = "#") Конкурс
           li.menu__item: a.menu__link(href = "#") HTML Academy
 
         .menu__block
-          .menu__logo: a
-            img.menu__img(src = "img/logo-pink-white-mobile.svg", width = "75", height = "22", alt = "Pink")
+          a.menu__logo-link: .menu__logo
 
           button.menu__toggle(type = "button") Меню
 
@@ -28,7 +27,7 @@ html(lang = "en")
 
     main
       section.promo
-        a.btn.promo__btn.btn--download(href = "#") Скачать приложение
+        a.btn.btn--download(href = "#") Скачать приложение
 
         ul.promo__list
           li.promo__item.promo__item--apple Apple
