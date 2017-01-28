@@ -11,17 +11,19 @@ html(lang = "en")
     header.page-header
       h1.visually-hidden HTML Academy: Pink
 
-      nav.menu
-        ul.menu__list
-          li.menu__item: a.menu__link.menu__link--current Главная
-          li.menu__item: a.menu__link(href = "#") Фотографии
-          li.menu__item: a.menu__link(href = "#") Конкурс
-          li.menu__item: a.menu__link(href = "#") HTML Academy
+      .page-header__wrapper
+        .container
+          nav.menu
+            .menu__block
+              a.menu__logo-link: .menu__logo
 
-        .menu__block
-          a.menu__logo-link: .menu__logo
+              button.menu__toggle(type = "button") Меню
 
-          button.menu__toggle(type = "button") Меню
+            ul.menu__list
+              li.menu__item: a.menu__link.menu__link--current Главная
+              li.menu__item: a.menu__link(href = "#") Фотографии
+              li.menu__item: a.menu__link(href = "#") Конкурс
+              li.menu__item: a.menu__link(href = "#") HTML Academy
 
       .page-header__background
 

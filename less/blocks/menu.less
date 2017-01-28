@@ -6,40 +6,41 @@
 
 .menu {
   .desktop-width({
-    background-color: fade(@mirage, 70%);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    position: absolute;
-    width: 100%;
-    margin-top: 2px;
+    border-top: 2px solid fade(@mirage, 70%);
   });
 
   &__block {
-    position: absolute;
     display: flex;
     flex-direction: row;
     box-sizing: border-box;
     padding: 0 22px;
     width: 100%;
-    transition: all 0.4s linear;
+    transition: border-color, background-color 0.4s linear;
 
     justify-content: space-between;
     align-items: center;
     .borders-and-background();
+
+    .tablet-width({
+      padding: 0 40px;
+    });
 
     .desktop-width({
       position: static;
       width: 200px;
       display: block;
       order: -1;
+      padding: 0;
     });
   }
 
   &--js &__block {
     border-color: fade(@mirage, 70%);
     background-color: fade(@mirage, 70%);
-    transition: all 0.4s linear;
+    transition: border-color, background-color 0.4s linear;
   }
 
   &__block, &--js &__block {
@@ -94,18 +95,19 @@
   &__list {
     display: flex;
     flex-direction: column;
-    margin-top: 0;
     list-style-type: none;
-    transition: margin 0.4s ease-out;
+
+    visibility: visible;
+    opacity: 1;
+
+    transition: opacity 0.4s linear;
   }
 
   &--js &__list {
-    margin-top: -260px;
-    transition: margin 0.4s ease-out;
+    visibility: hidden;
+    opacity: 0;
 
-    .tablet-width({
-      margin-top: -278px;
-    });
+    transition: visibility 0s linear 0.4s, opacity 0.4s linear;
   }
 
   &__list, &--js &__list {
@@ -114,7 +116,8 @@
       flex-direction: row;
       flex-wrap: wrap;
       align-items: center;
-      margin-right: 130px;
+      visibility: visible;
+      opacity: 1;
     });
   }
 
@@ -140,9 +143,27 @@
     color: @white;
     text-decoration: none;
 
+    .desktop-width({
+      &:hover:not(&--current) {
+        color: @cerise-red;
+      }
+    });
+
     &--current {
+      position: relative;
       cursor: default;
+
       user-select: none;
+
+      &::after {
+        position: absolute;
+        bottom: 15px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: @white;
+        content: "";
+      }
     }
 
     .tablet-desktop-width({
@@ -156,10 +177,6 @@
 
     .tablet-desktop-width({
       padding: 24px 0;
-    });
-
-    .desktop-width({
-      margin-left: 106px;
     });
   }
 }

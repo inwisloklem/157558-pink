@@ -1,12 +1,25 @@
 .page-header {
-  &__background {
-    min-height: 462px;
-    // background: fade(@mirage, 95%) url("../img/iphone-hand-mobile@1x.png") no-repeat;
-    background: fade(@mirage, 95%) url("../img/iphone-hand-mobile@1x.png") no-repeat;
-    background-position: center bottom;
-    // background: url("../img/iphone-hand-mobile@1x.png") no-repeat, @mirage url("../img/bg-back-mobile@1x.jpg") no-repeat;
-    // background-color: fade(@mirage, 95%);
-    // background-position: bottom left, top center;
-    // background-size: auto, cover;
+  &__wrapper {
+    .desktop-width({
+      background-color: fade(@mirage, 70%);
+    });
   }
+
+  min-height: 462px;
+
+  background-color: @mirage;
+  background-image: url("../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg");
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: auto, cover;
+
+  .tablet-width({
+    min-height: 730px;
+    background: fade(@mirage, 95%);
+  });
+
+  .desktop-width({
+    min-height: 850px;
+    background: fade(@mirage, 95%);
+  });
 }
