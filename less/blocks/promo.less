@@ -8,6 +8,30 @@
   justify-content: space-between;
   align-items: center;
 
+  @media @tablet {
+    margin-right: 300px;
+    margin-bottom: 100px;
+    min-height: 400px;
+    background-color: transparent;
+  }
+
+  @media @desktop {
+    background-color: transparent;
+  }
+
+  &__text {
+    display: none;
+
+    @media @tablet {
+      display: block;
+      width: 200px;
+      color: @white;
+      text-align: center;
+
+      .font(40px, 48px, 300);
+    }
+  }
+
   &__list {
     list-style-type: none;
     font-size: 0;
@@ -16,7 +40,6 @@
   &__item {
     display: inline-block;
     vertical-align: bottom;
-    opacity: 0.7;
 
     &--apple {
       margin-right: 38px;
@@ -43,8 +66,14 @@
     width: 230px;
     color: @white;
     text-align: center;
-    opacity: 0.7;
+    opacity: 0.9;
 
     .font(14px, 24px, 300);
+
+    @media @tablet {
+      width: 350px;
+
+      .font(18px, 24px, 300);
+    }
   }
 }
