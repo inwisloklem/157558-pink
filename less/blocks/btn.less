@@ -12,11 +12,11 @@
     border: 3px solid @white;
     border-radius: 28px;
 
-    .desktop-width({
-        &:hover {
-          color: @cerise-red;
-          background-color: @white;
-        }
-    });
+    @media @desktop {
+      &:hover {
+        background-color: @white;
+        color: @cerise-red;
+      }
+    }
   }
 }
