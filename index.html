@@ -21,16 +21,16 @@
             <a class="menu__logo-link">
               <div class="menu__logo"></div>
             </a>
-            <button type="button" class="menu__toggle">Меню</button>
+            <button class="menu__toggle" type="button">Меню</button>
           </div>
           <ul class="menu__list">
             <li class="menu__item"><a class="menu__link menu__link--current">Главная</a>
             </li>
-            <li class="menu__item"><a href="#" class="menu__link">Фотографии</a>
+            <li class="menu__item"><a class="menu__link" href="#">Фотографии</a>
             </li>
-            <li class="menu__item"><a href="#" class="menu__link">Конкурс</a>
+            <li class="menu__item"><a class="menu__link" href="#">Конкурс</a>
             </li>
-            <li class="menu__item"><a href="#" class="menu__link">HTML Academy</a>
+            <li class="menu__item"><a class="menu__link" href="#">HTML Academy</a>
             </li>
           </ul>
         </nav>
@@ -39,7 +39,7 @@
     <div class="page-header__background"></div>
   </header>
   <main>
-    <section class="promo"><a href="#" class="btn btn--download">Скачать приложение</a>
+    <section class="promo"><a class="btn btn--download" href="#">Скачать приложение</a>
       <ul class="promo__list">
         <li class="promo__item promo__item--apple">Apple</li>
         <li class="promo__item promo__item--android">Android</li>
@@ -82,13 +82,13 @@
     </section>
     <section class="price">
       <h2 class="visually-hidden">Прайс-лист</h2>
-      <input id="price-table-1" type="radio" name="price-toggle" class="price__input">
-      <input id="price-table-2" type="radio" name="price-toggle" checked class="price__input">
-      <input id="price-table-3" type="radio" name="price-toggle" class="price__input">
+      <input class="price__input" id="price-table-1" type="radio" name="price-toggle">
+      <input class="price__input" id="price-table-2" type="radio" name="price-toggle" checked>
+      <input class="price__input" id="price-table-3" type="radio" name="price-toggle">
       <div class="price__slider">
-        <label for="price-table-1" class="price__label">1</label>
-        <label for="price-table-2" class="price__label">2</label>
-        <label for="price-table-3" class="price__label">3</label>
+        <label class="price__label" for="price-table-1">1</label>
+        <label class="price__label" for="price-table-2">2</label>
+        <label class="price__label" for="price-table-3">3</label>
       </div>
       <div class="price__wrapper">
         <table class="price__table">
@@ -109,21 +109,21 @@
           </tr>
           <tr class="price__row">
             <td class="price__cell price__toggle">Розовый фильтр</td>
-            <td data-content="Розовый фильтр" class="price__cell price__cell--yes">Да</td>
-            <td data-content="Розовый фильтр" class="price__cell price__cell--yes">Да</td>
-            <td data-content="Розовый фильтр" class="price__cell price__cell--yes">Да</td>
+            <td class="price__cell price__cell--yes" data-content="Розовый фильтр">Да</td>
+            <td class="price__cell price__cell--yes" data-content="Розовый фильтр">Да</td>
+            <td class="price__cell price__cell--yes" data-content="Розовый фильтр">Да</td>
           </tr>
           <tr class="price__row">
             <td class="price__cell price__toggle">Смайлики</td>
-            <td data-content="Смайлики" class="price__cell price__cell--no">Нет</td>
-            <td data-content="Смайлики" class="price__cell price__cell--yes">Да</td>
-            <td data-content="Смайлики" class="price__cell price__cell--yes">Да</td>
+            <td class="price__cell price__cell--no" data-content="Смайлики">Нет</td>
+            <td class="price__cell price__cell--yes" data-content="Смайлики">Да</td>
+            <td class="price__cell price__cell--yes" data-content="Смайлики">Да</td>
           </tr>
           <tr class="price__row">
             <td class="price__cell price__toggle">Комментарии</td>
-            <td data-content="Комментарии" class="price__cell price__cell--no">Нет</td>
-            <td data-content="Комментарии" class="price__cell price__cell--no">Нет</td>
-            <td data-content="Комментарии" class="price__cell price__cell--yes">Да</td>
+            <td class="price__cell price__cell--no" data-content="Комментарии">Нет</td>
+            <td class="price__cell price__cell--no" data-content="Комментарии">Нет</td>
+            <td class="price__cell price__cell--yes" data-content="Комментарии">Да</td>
           </tr>
         </table>
       </div>
