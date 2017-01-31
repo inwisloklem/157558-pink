@@ -1,0 +1,75 @@
+.research {
+  display: none;
+
+  @media @tablet {
+    display: flex;
+    flex-direction: row;
+    padding: 40px;
+  }
+
+  @media @desktop {
+    display: flex;
+    flex-direction: row;
+    padding: 80px 130px;
+    background-color: @concrete;
+  }
+
+  &__image {
+    margin-right: 40px;
+    height: 276px;
+    background: url("../img/icon-timer.svg") no-repeat;
+    background-position: right center;
+    background-size: 238px 276px;
+
+    flex-basis: 50%;
+
+    @media @desktop {
+      margin-right: 80px;
+      height: 345px;
+      background-size: 298px 345px;
+
+      flex-basis: 40%;
+    }
+  }
+
+  &__block {
+    align-self: center;
+    flex-basis: 50%;
+
+    @media @desktop {
+      flex-basis: 60%;
+    }
+  }
+
+  &__title {
+    @media @tablet-desktop {
+      margin-bottom: 20px;
+
+      .font(30px, 36px, 700);
+    }
+  }
+
+  &__text {
+    @media @tablet-desktop {
+      margin-bottom: 20px;
+
+      .font(14px, 24px, 400);
+    }
+
+    @media @desktop {
+      .font(18px, 30px, 400);
+    }
+  }
+
+  &__link {
+    @media @tablet-desktop {
+      color: @cerise-red;
+
+      .font(14px, 24px, 400);
+    }
+
+    @media @desktop {
+      .font(18px, 30px, 400);
+    }
+  }
+}

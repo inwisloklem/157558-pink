@@ -1,8 +1,21 @@
 .offer {
   &__title {
+    margin-bottom: 40px;
     color: @mirage;
 
     .font(24px, 29px, 300);
+
+    @media @tablet {
+      margin-bottom: 0;
+
+      .font(40px, 48px, 300);
+    }
+
+    @media @desktop {
+      margin-bottom: 0;
+
+      .font(50px, 60px, 300);
+    }
   }
 
   &__hgroup {
@@ -10,9 +23,17 @@
     margin-top: 40px;
     width: 250px;
     text-align: center;
-  }
 
-  &__title {
-    margin-bottom: 40px;
+    @media @tablet {
+      margin-top: 60px;
+      margin-bottom: 60px;
+      width: 620px;
+    }
+
+    @media @desktop {
+      margin-top: 80px;
+      margin-bottom: 80px;
+      width: 820px;
+    }
   }
 }

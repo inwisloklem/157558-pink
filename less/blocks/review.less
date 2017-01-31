@@ -1,7 +1,17 @@
 .review {
   &__block {
+    display: flex;
+    flex-direction: column;
     margin-top: 50px;
-    margin-bottom: 100px;
+    margin-bottom: 45px;
+
+    @media @desktop {
+      flex-direction: column-reverse;
+      margin-top: 0;
+      padding-top: 200px;
+      background: url("../img/icon-quotes.svg") no-repeat;
+      background-position: center 75px;
+    }
   }
 
   &__name {
@@ -11,6 +21,12 @@
     font-style: normal;
 
     .font(18px, 30px, 700);
+
+    @media @desktop {
+      margin-bottom: 10px;
+
+      .font(24px, 30px, 700);
+    }
   }
 
   &__text {
@@ -18,5 +34,59 @@
     text-align: center;
 
     .font(14px, 30px, 400);
+
+    @media @desktop {
+      margin: auto;
+      margin-bottom: 40px;
+      width: 690px;
+
+      .font(18px, 30px, 400);
+    }
+  }
+
+  &__note {
+    display: none;
+
+    @media @desktop {
+      margin: auto;
+      margin-bottom: 40px;
+
+      .font(18px, 30px, 400);
+    }
+  }
+
+  &__slider {
+    margin-bottom: 45px;
+    text-align: center;
+
+    @media @desktop {
+      display: none;
+    }
+  }
+
+  &__dot {
+    display: inline-block;
+    margin-right: 6px;
+    width: 6px;
+    height: 6px;
+    border: 3px solid @white;
+    border-radius: 50%;
+    background-color: @silver-sand;
+    cursor: pointer;
+
+    &--active {
+      border: 3px solid @mirage;
+      background-color: @white;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  &__quote {
+    @media @desktop {
+      display: none;
+    }
   }
 }

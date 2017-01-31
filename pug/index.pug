@@ -44,7 +44,10 @@ html(lang = "en")
       section.offer
         .offer__hgroup
           h2.offer__title Устали от серости мегаполиса?
-          h2.offer__title Нам есть, что вам предложить!
+          h2.offer__title
+            | Нам есть, что вам
+            br
+            | предложить!
 
       section.features
         ul.features__list
@@ -58,20 +61,29 @@ html(lang = "en")
             h3.features__title Заводит новых друзей
             p.features__desc Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых
 
+      section.research
+        .research__image
+        .research__block
+          h2.research__title Эффект на 24 часа!
+          p.research__text Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!
+          a.research__link(href = "#") Узнать больше об исследовании
+
       section.review
         article.review__item
-          blockquote.review__block
+          blockquote.review__block.container
+            p.review__note 25 лет, водитель трамвая
             cite.review__name Николай Петров
 
             p.review__text
-              | «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
-              | А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+              span.review__quote «
+              | Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
+              | А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!
+              span.review__quote »
 
         .review__slider
-          .review__toggle
-            span.review__dot.review__dot--active
-            span.review__dot
-            span.review__dot
+          span.review__dot.review__dot--active
+          span.review__dot
+          span.review__dot
 
       section.price
         h2.visually-hidden Прайс-лист
@@ -135,4 +147,16 @@ html(lang = "en")
 
         .contacts__map
 
-      script(src = "js/menu.js")
+    footer.page-footer.container
+      section.logotype
+        a.logotype__link(href = "#") Pink
+
+      section.social
+        a.social__link(href = "#") Instagram
+        a.social__link(href = "#") Facebook
+        a.social__link(href = "#") Youtube
+
+      section.copyright
+        a.copyright__link(href = "#") HTML Academy
+
+    script(src = "js/menu.js")
