@@ -2,12 +2,16 @@
 
 var gulp = require("gulp");
 
+var inject = require("gulp-inject");
 var less = require("gulp-less");
 var lessPluginGlob = require("less-plugin-glob");
 var plumber = require("gulp-plumber");
 var prettify = require("gulp-html-prettify");
 var pug = require("gulp-pug");
+var rename = require("gulp-rename");
 var server = require("browser-sync").create();
+var svgmin = require("gulp-svgmin");
+var svgstore  = require("gulp-svgstore");
 
 gulp.task("serve", ["markup", "style"], function() {
   server.init({
@@ -42,4 +46,20 @@ gulp.task("style", function() {
       }))
     .pipe(gulp.dest("css"))
     .pipe(server.stream());
+});
+
+gulp.task("inject-svg", function() {
+  var svgs = gulp
+    .src("img/icons/*.svg")
+    .pipe(svgmin())
+    .pipe(svgstore({inlineSvg: true}));
+
+  function fileContents(filePath, file) {
+    return file.contents.toString();
+  }
+
+  return gulp
+    .src("pug/index.pug")
+    .pipe(inject(svgs, {transform: fileContents}))
+    .pipe(gulp.dest("pug"));
 });

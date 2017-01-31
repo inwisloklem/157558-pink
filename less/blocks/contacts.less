@@ -4,6 +4,14 @@
     text-align: center;
 
     .font(24px, 29px, 300);
+
+    @media @tablet {
+      .font(40px, 48px, 300);
+    }
+
+    @media @desktop {
+      .font(50px, 60px, 300);
+    }
   }
 
   &__hgroup {
@@ -15,11 +23,37 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 45px;
+
+    @media @tablet-desktop {
+      flex-direction: row;
+      margin-bottom: 0;
+      list-style-type: none;
+
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 
   &__item {
     margin-bottom: 25px;
     text-align: center;
+
+    @media @tablet {
+      margin-bottom: 0;
+      min-height: 110px;
+
+      flex-basis: 50%;
+    }
+
+    @media @desktop {
+      min-height: 110px;
+
+      flex-basis: 33.3%;
+
+      &:nth-of-type(2) {
+        order: 1;
+      }
+    }
   }
 
   &__subtitle {
@@ -34,13 +68,38 @@
     color: @cerise-red;
 
     .font(24px, 29px, 300);
+
+    @media @desktop {
+      width: 100%;
+    }
+  }
+
+  &__link {
+    color: @cerise-red;
+    text-decoration: none;
+
+    .font(24px, 29px, 300);
+
+    @media @desktop {
+      &:hover {
+        border-bottom: 1px solid @cerise-red;
+      }
+    }
   }
 
   &__map {
     position: relative;
     overflow: hidden;
-    height: 200px;
+    height: 250px;
     background-color: @concrete;
+
+    @media @tablet {
+      height: 420px;
+    }
+
+    @media @desktop {
+      height: 550px;
+    }
 
     &::before {
       position: absolute;
