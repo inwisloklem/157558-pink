@@ -149,21 +149,18 @@
     text-decoration: none;
 
     @media @desktop {
-      &:hover:not(&--current) {
+      &:hover {
         color: @cerise-red;
       }
     }
 
-    &--current {
-      position: relative;
-      opacity: 0.3;
-      cursor: default;
-
-      user-select: none;
-    }
-
     @media @tablet-desktop {
       padding: 24px 0;
+    }
+
+    &:active {
+      color: @white;
+      opacity: 0.3;
     }
   }
 

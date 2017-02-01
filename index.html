@@ -105,7 +105,7 @@
       </symbol>
     </svg>
   </div>
-  <header class="page-header">
+  <header class="page-header" id="top">
     <h1 class="visually-hidden">HTML Academy: Pink</h1>
     <div class="page-header__wrapper">
       <div class="container">
@@ -117,13 +117,13 @@
             <button class="menu__toggle" type="button">Меню</button>
           </div>
           <ul class="menu__list">
-            <li class="menu__item"><a class="menu__link menu__link--current">Главная</a>
+            <li class="menu__item"><a class="menu__link" href="#features">Возможности</a>
             </li>
-            <li class="menu__item"><a class="menu__link" href="#">Фотографии</a>
+            <li class="menu__item"><a class="menu__link" href="#review">Отзывы</a>
             </li>
-            <li class="menu__item"><a class="menu__link" href="#">Конкурс</a>
+            <li class="menu__item"><a class="menu__link" href="#price">Цены</a>
             </li>
-            <li class="menu__item"><a class="menu__link" href="https://htmlacademy.ru/profile/inwisloklem" target="_blank">HTML Academy</a>
+            <li class="menu__item"><a class="menu__link" href="#contacts">Контакты</a>
             </li>
           </ul>
         </nav>
@@ -146,7 +146,7 @@
         <h2 class="offer__title">Нам есть, что вам<br>предложить!</h2>
       </div>
     </section>
-    <section class="features">
+    <section class="features" id="features">
       <ul class="features__list">
         <li class="features__item">
           <h3 class="features__title">Поднимает настроение</h3>
@@ -169,7 +169,7 @@
         <p class="research__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p><a class="research__link" href="#">Узнать больше об исследовании</a>
       </div>
     </section>
-    <section class="review">
+    <section class="review" id="review">
       <article class="review__item">
         <blockquote class="review__block container">
           <p class="review__note">25 лет, водитель трамвая</p><cite class="review__name">Николай Петров</cite>
@@ -180,7 +180,7 @@
       <div class="review__slider"><span class="review__dot review__dot--active"></span><span class="review__dot"></span><span class="review__dot"></span>
       </div>
     </section>
-    <section class="price">
+    <section class="price" id="price">
       <h2 class="visually-hidden">Прайс-лист</h2>
       <input class="price__input" id="price-table-1" type="radio" name="price-toggle">
       <input class="price__input" id="price-table-2" type="radio" name="price-toggle" checked>
@@ -228,7 +228,7 @@
         </table>
       </div>
     </section>
-    <section class="contacts">
+    <section class="contacts" id="contacts">
       <div class="contacts__hgroup">
         <h2 class="contacts__title">Остались вопросы?</h2>
         <h2 class="contacts__title">Свяжитесь с нами!</h2>
@@ -252,7 +252,7 @@
     </section>
   </main>
   <footer class="page-footer container">
-    <section class="logotype"><a class="logotype__link" href="#">Pink</a>
+    <section class="logotype"><a class="logotype__link" href="#top">Pink<picture><source media="(min-width: 1099px)" srcset="img/logo-pink-blue-desktop.svg"><img class="logotype__icon" src="img/logo-pink-blue-tablet.svg" width="146" height="40" alt="Pink"></picture></a>
     </section>
     <section class="social">
       <ul class="social__list">
@@ -264,7 +264,7 @@
         </li>
       </ul>
     </section>
-    <section class="copyright"><a class="copyright__link" href="#">HTML Academy</a>
+    <section class="copyright"><a class="copyright__link" href="https://htmlacademy.ru/profile/inwisloklem" target="_blank">Разработано HTML Academy<svg class="copyright__icon" width="60" height="60"><use xlink:href="#icon-htmlacademy"></use></svg></a>
     </section>
   </footer>
   <script src="js/menu.js"></script>
