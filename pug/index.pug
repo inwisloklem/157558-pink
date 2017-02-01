@@ -182,8 +182,11 @@ html(lang = "en")
 
       section.copyright
         a.copyright__link(href = "https://htmlacademy.ru/profile/inwisloklem", target = "_blank")
-          | Разработано HTML Academy
-          svg.copyright__icon(width = 60, height = 60)
+          span.copyright__note Разработано
+          span.visually_hidden HTML Academy
+          svg.copyright__icon(width = 48, height = 48)
             use(xlink:href = "#icon-htmlacademy")
 
     script(src = "js/menu.js")
+    script(src = "https://maps.googleapis.com/maps/api/js?v=3.exp")
+    script(src = "js/map.js")
