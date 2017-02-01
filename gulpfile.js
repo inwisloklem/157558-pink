@@ -31,7 +31,7 @@ gulp.task("markup", function() {
     .pipe(plumber())
     .pipe(pug())
     .pipe(prettify({
-      indent_char: ' ',
+      indent_char: " ",
       indent_size: 2
     }))
     .pipe(gulp.dest("."))
