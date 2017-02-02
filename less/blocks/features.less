@@ -17,31 +17,66 @@
     display: flex;
     flex-direction: column;
     margin-top: 50px;
+    padding: 0 40px;
+    list-style-type: none;
 
     justify-content: center;
+
+    @media @tablet {
+      margin-top: 0;
+
+      flex-basis: 50%;
+    }
   }
 
   &__title {
-    padding: 0 40px;
     padding-bottom: 24px;
     text-align: center;
 
     .font(18px, 24px, 700);
+
+    @media @tablet {
+      text-align: left;
+    }
   }
 
   &__desc {
-    padding: 0 40px;
-    padding-bottom: 44px;
+    margin-bottom: 38px;
     color: @mirage;
     text-align: center;
 
     .font(14px, 24px, 400);
+
+    @media @tablet {
+      text-align: left;
+    }
   }
 
-  &::after {
-    display: block;
-    height: 276px;
-    background: url("../img/iphone-screen-mobile@1x.png") no-repeat center top;
-    content: "";
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+
+    @media @tablet {
+      flex-direction: row-reverse;
+
+      align-items: flex-start;
+    }
+
+    &::after {
+      display: block;
+      height: 276px;
+      background: url("../img/iphone-screen-mobile@1x.png") no-repeat center top;
+      content: "";
+
+      @media @tablet {
+        position: relative;
+        bottom: 140px;
+        margin-bottom: -140px;
+        height: 547px;
+        background: url("../img/iphone-screen-3-tablet@1x.png") no-repeat right bottom;
+
+        flex-basis: 50%;
+      }
+    }
   }
 }

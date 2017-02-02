@@ -15,24 +15,25 @@
   }
 
   &__image {
-    margin-right: 40px;
     height: 276px;
     background: url("../img/icon-timer.svg") no-repeat;
-    background-position: right center;
+    background-position: right 16px center;
     background-size: 238px 276px;
 
     flex-basis: 50%;
 
     @media @desktop {
-      margin-right: 40px;
       height: 345px;
       background-size: 298px 345px;
+      background-position: right center;
 
       flex-basis: 40%;
     }
   }
 
   &__block {
+    padding: 0 40px;
+
     align-self: center;
     flex-basis: 50%;
 

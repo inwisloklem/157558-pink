@@ -1,7 +1,7 @@
 contactsMap = document.querySelector(".contacts__map");
 
 function initMap() {
-  var location = {lat: 59.937532, lng: 30.320992};
+  var location = {lat: 59.936331, lng: 30.321582};
   var mapOptions = {
     center: new google.maps.LatLng(location),
     zoom: 16,
@@ -12,17 +12,18 @@ function initMap() {
 
   var markerImage = new google.maps.MarkerImage(
     "../img/icon-map-marker.svg",
-    new google.maps.Size(66, 100)
+    new google.maps.Size(36, 36)
   );
 
   new google.maps.Marker({
-    position: {lat: 59.936331, lng: 30.321582},
+    position: location,
     map: map,
     icon: markerImage
   });
 
   window.onresize = function() {
     map.setCenter(location);
+    map.setZoom(16);
   }
 }
 
