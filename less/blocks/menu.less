@@ -73,11 +73,9 @@
   }
 
   &__toggle {
-    width: 24px;
-    height: 24px;
     outline: none;
     border: none;
-    background: url("../img/icon-menu-cross.svg");
+    background-color: transparent;
     font-size: 0;
     cursor: pointer;
 
@@ -86,9 +84,20 @@
     }
   }
 
-  &--js &__toggle {
-    width: 50px;
-    background: url("../img/icon-menu-burger.svg");
+  &__icon-burger {
+    display: none;
+
+    fill: @cerise-red;
+  }
+
+  &--js &__icon-burger {
+    display: block;
+
+    fill: @cerise-red;
+  }
+
+  &--js &__icon-cross {
+    display: none;
   }
 
   &__list {
