@@ -47,7 +47,7 @@ html(lang = "en")
         .promo__note Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
 
     main
-      section.offer
+      section.offer#features
         .offer__hgroup
           h2.offer__title Устали от серости мегаполиса?
           h2.offer__title
@@ -55,25 +55,26 @@ html(lang = "en")
             br
             | предложить!
 
-      section.features#features
+      section.features
         .features__wrapper
-          ul.features__list
-            li.features__item
+          ul.features__list.container
+            li.features__item.features__item--image-1
               h3.features__title Поднимает настроение
               p.features__desc Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
-            li.features__item
+            li.features__item.features__item--image-2
               h3.features__title Меняет мир вокруг
               p.features__desc Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
-            li.features__item.features__item
+            li.features__item.features__item--image-3
               h3.features__title Заводит новых друзей
               p.features__desc Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых
 
       section.research
-        .research__image
-        .research__block
-          h2.research__title Эффект на 24 часа!
-          p.research__text Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!
-          a.research__link(href = "#") Узнать больше об исследовании
+        .research__wrapper
+          .research__image
+          .research__block
+            h2.research__title Эффект на 24 часа!
+            p.research__text Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!
+            a.research__link(href = "#") Узнать больше об исследовании
 
       section.review#review
         article.review__item
@@ -92,7 +93,7 @@ html(lang = "en")
           span.review__dot
           span.review__dot
 
-      section.price#price
+      section.price
         h2.visually-hidden Прайс-лист
 
         input.price__input#price-table-1(type = "radio", name = "price-toggle")
@@ -104,7 +105,7 @@ html(lang = "en")
           label.price__label(for = "price-table-2") 2
           label.price__label(for = "price-table-3") 3
 
-        .price__wrapper
+        .price__wrapper#price
           table.price__table
             tr.price__row
               th.price__toggle

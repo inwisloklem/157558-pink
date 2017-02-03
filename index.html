@@ -140,24 +140,24 @@
     </section>
   </header>
   <main>
-    <section class="offer">
+    <section class="offer" id="features">
       <div class="offer__hgroup">
         <h2 class="offer__title">Устали от серости мегаполиса?</h2>
         <h2 class="offer__title">Нам есть, что вам<br>предложить!</h2>
       </div>
     </section>
-    <section class="features" id="features">
+    <section class="features">
       <div class="features__wrapper">
-        <ul class="features__list">
-          <li class="features__item">
+        <ul class="features__list container">
+          <li class="features__item features__item--image-1">
             <h3 class="features__title">Поднимает настроение</h3>
             <p class="features__desc">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
           </li>
-          <li class="features__item">
+          <li class="features__item features__item--image-2">
             <h3 class="features__title">Меняет мир вокруг</h3>
             <p class="features__desc">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
           </li>
-          <li class="features__item features__item">
+          <li class="features__item features__item--image-3">
             <h3 class="features__title">Заводит новых друзей</h3>
             <p class="features__desc">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
           </li>
@@ -165,10 +165,12 @@
       </div>
     </section>
     <section class="research">
-      <div class="research__image"></div>
-      <div class="research__block">
-        <h2 class="research__title">Эффект на 24 часа!</h2>
-        <p class="research__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p><a class="research__link" href="#">Узнать больше об исследовании</a>
+      <div class="research__wrapper">
+        <div class="research__image"></div>
+        <div class="research__block">
+          <h2 class="research__title">Эффект на 24 часа!</h2>
+          <p class="research__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p><a class="research__link" href="#">Узнать больше об исследовании</a>
+        </div>
       </div>
     </section>
     <section class="review" id="review">
@@ -182,7 +184,7 @@
       <div class="review__slider"><span class="review__dot review__dot--active"></span><span class="review__dot"></span><span class="review__dot"></span>
       </div>
     </section>
-    <section class="price" id="price">
+    <section class="price">
       <h2 class="visually-hidden">Прайс-лист</h2>
       <input class="price__input" id="price-table-1" type="radio" name="price-toggle">
       <input class="price__input" id="price-table-2" type="radio" name="price-toggle" checked>
@@ -192,7 +194,7 @@
         <label class="price__label" for="price-table-2">2</label>
         <label class="price__label" for="price-table-3">3</label>
       </div>
-      <div class="price__wrapper">
+      <div class="price__wrapper" id="price">
         <table class="price__table">
           <tr class="price__row">
             <th class="price__toggle"></th>
