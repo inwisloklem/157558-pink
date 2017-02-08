@@ -2,6 +2,7 @@
 
 var gulp = require("gulp");
 
+var autoprefixer = require("gulp-autoprefixer");
 var inject = require("gulp-inject");
 var less = require("gulp-less");
 var lessPluginGlob = require("less-plugin-glob");
@@ -44,6 +45,9 @@ gulp.task("style", function() {
     .pipe(less({
         plugins: [lessPluginGlob]
       }))
+    .pipe(autoprefixer({
+      browsers: ["last 2 versions"]
+    }))
     .pipe(gulp.dest("css"))
     .pipe(server.stream());
 });
