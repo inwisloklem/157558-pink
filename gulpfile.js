@@ -51,6 +51,7 @@ gulp.task("dist", function(fn) {
     "imagemin",
     "svgmin",
     "copy",
+    "marker-fix",
     fn
   );
 });
@@ -79,8 +80,14 @@ gulp.task("inject-svg", function() {
     .pipe(gulp.dest("pug"));
 });
 
+gulp.task("marker-fix", function() {
+  return gulp.src("dist/js/map.js")
+  .pipe(replace("../img/icon-map-marker.svg", "../pink/img/icon-map-marker.svg"))
+  .pipe(gulp.dest("dist/js"));
+});
+
 gulp.task("markup", function() {
-  gulp.src("pug/**/*.pug")
+  return gulp.src("pug/**/*.pug")
     .pipe(plumber())
     .pipe(pug())
     .pipe(prettify({
@@ -92,7 +99,7 @@ gulp.task("markup", function() {
 });
 
 gulp.task("replace-css", function() {
-  gulp.src("dist/index.html")
+  return gulp.src("dist/index.html")
   .pipe(replace("style.css", "style.min.css"))
   .pipe(gulp.dest("dist"));
 });
@@ -111,7 +118,7 @@ gulp.task("serve", ["markup", "style"], function() {
 });
 
 gulp.task("style", function() {
-  gulp.src("less/style.less")
+  return gulp.src("less/style.less")
     .pipe(plumber())
     .pipe(less({
       plugins: [lessPluginGlob]
