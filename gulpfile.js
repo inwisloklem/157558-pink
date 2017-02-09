@@ -47,10 +47,10 @@ gulp.task("dist", function(fn) {
     "markup",
     "style",
     "cssmin",
-    "replace-css",
     "imagemin",
     "svgmin",
     "copy",
+    "replace-css",
     "marker-fix",
     fn
   );
