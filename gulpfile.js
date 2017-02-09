@@ -21,7 +21,6 @@ gulp.task("copy", function() {
   return gulp.src([
     "fonts/*.{woff,woff2}",
     "css/**",
-    "img/**/*.svg",
     "js/**",
     "*.html",
     "*.png"
@@ -40,6 +39,7 @@ gulp.task("dist", function(fn) {
     "markup",
     "style",
     "imagemin",
+    "svgmin",
     "copy",
     fn
   );
@@ -106,4 +106,10 @@ gulp.task("style", function() {
     }))
     .pipe(gulp.dest("css"))
     .pipe(server.stream());
+});
+
+gulp.task("svgmin", function() {
+  return gulp.src("img/**/*.svg")
+  .pipe(svgmin())
+  .pipe(gulp.dest("dist/img"));
 });
