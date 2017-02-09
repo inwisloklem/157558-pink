@@ -3,6 +3,7 @@
 var gulp = require("gulp");
 
 var autoprefixer = require("gulp-autoprefixer");
+var cssmin = require("gulp-csso");
 var del = require("del");
 var imagemin = require("gulp-imagemin");
 var inject = require("gulp-inject");
@@ -12,15 +13,19 @@ var plumber = require("gulp-plumber");
 var prettify = require("gulp-html-prettify");
 var pug = require("gulp-pug");
 var rename = require("gulp-rename");
+var replace = require("gulp-replace");
 var run = require("run-sequence");
 var server = require("browser-sync").create();
 var svgmin = require("gulp-svgmin");
-var svgstore  = require("gulp-svgstore");
+var svgstore = require("gulp-svgstore");
+
+gulp.task("clean", function() {
+  return del("dist");
+});
 
 gulp.task("copy", function() {
   return gulp.src([
     "fonts/*.{woff,woff2}",
-    "css/**",
     "js/**",
     "*.html",
     "*.png"
@@ -28,8 +33,11 @@ gulp.task("copy", function() {
   .pipe(gulp.dest("dist"));
 });
 
-gulp.task("clean", function() {
-  return del("dist");
+gulp.task("cssmin", function() {
+  return gulp.src("css/style.css")
+    .pipe(cssmin())
+    .pipe(rename("style.min.css"))
+    .pipe(gulp.dest("dist/css"));
 });
 
 gulp.task("dist", function(fn) {
@@ -38,6 +46,8 @@ gulp.task("dist", function(fn) {
     "inject-svg",
     "markup",
     "style",
+    "cssmin",
+    "replace-css",
     "imagemin",
     "svgmin",
     "copy",
@@ -64,8 +74,7 @@ gulp.task("inject-svg", function() {
     return file.contents.toString();
   }
 
-  return gulp
-    .src("pug/index.pug")
+  return gulp.src("pug/index.pug")
     .pipe(inject(svgs, {transform: fileContents}))
     .pipe(gulp.dest("pug"));
 });
@@ -80,6 +89,12 @@ gulp.task("markup", function() {
     }))
     .pipe(gulp.dest("."))
     .pipe(server.stream());
+});
+
+gulp.task("replace-css", function() {
+  gulp.src("dist/index.html")
+  .pipe(replace("style.css", "style.min.css"))
+  .pipe(gulp.dest("dist"));
 });
 
 gulp.task("serve", ["markup", "style"], function() {
@@ -99,8 +114,8 @@ gulp.task("style", function() {
   gulp.src("less/style.less")
     .pipe(plumber())
     .pipe(less({
-        plugins: [lessPluginGlob]
-      }))
+      plugins: [lessPluginGlob]
+    }))
     .pipe(autoprefixer({
       browsers: ["last 2 versions"]
     }))
